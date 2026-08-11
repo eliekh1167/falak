@@ -40,6 +40,16 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-void pb-28 pt-20 md:pt-28">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-void/60" />
         <OrbitField className="inset-0" />
         <div className="container-content relative">
           <FadeIn>
