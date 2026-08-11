@@ -45,7 +45,7 @@ export function YfpBadge({ variant = "light" }: { variant?: "light" | "dark" }) 
   );
 }
 
-export function YfpMark({ size = 35 }: { size?: number }) {
+export function YfpMark({ size = 55 }: { size?: number }) {
   return (
     <Image
       src="/images/yfp-logo.png"
