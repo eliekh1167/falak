@@ -11,8 +11,8 @@ const config: Config = {
       colors: {
         void: "#0A0E1A",
         indigo: "#171238",
-        copper: "#250A78",
-        "copper-light": "#917BD1",
+        copper: "#630095",
+        "copper-light": "#a468c2",
         paper: "#F5F3EC",
         ink: "#12141C",
         line: "#5C6B8A",
