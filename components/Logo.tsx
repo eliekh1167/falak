@@ -37,7 +37,7 @@ export function YfpBadge({ variant = "light" }: { variant?: "light" | "dark" }) 
         variant === "light" ? "border-paper/25" : "border-ink/20"
       } px-3 py-1.5 transition-colors hover:border-copper`}
     >
-      <Image src="/images/yfp-logo.png" alt="Youth for Physics" width={18} height={18} />
+      <Image src="/images/yfp-logo.png" alt="Youth for Physics" width={36} height={36} />
       <span className={`font-mono text-[11px] uppercase tracking-widest2 ${textColor}`}>
         A YFP Initiative
       </span>
