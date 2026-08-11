@@ -1,0 +1,92 @@
+/* Self-hosted fonts (fontsource) - no external CDN dependency */
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::selection {
+    background-color: #c1631b;
+    color: #f5f3ec;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  /* Visible keyboard focus everywhere, per accessibility floor */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #c1631b;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs tracking-widest2 uppercase text-copper;
+  }
+
+  .eyebrow-light {
+    @apply font-mono text-xs tracking-widest2 uppercase text-line;
+  }
+
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 md:px-10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-copper px-6 py-3
+      font-mono text-sm uppercase tracking-wide text-paper transition-colors duration-300
+      hover:bg-copper-light;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-line-soft
+      px-6 py-3 font-mono text-sm uppercase tracking-wide text-paper transition-colors duration-300
+      hover:border-copper hover:text-copper;
+  }
+
+  .btn-secondary-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-ink/20
+      px-6 py-3 font-mono text-sm uppercase tracking-wide text-ink transition-colors duration-300
+      hover:border-copper hover:text-copper;
+  }
+
+  /* Orbit hairline divider - the site's signature motif */
+  .orbit-divider {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(92,107,138,0.5), transparent);
+  }
+}
