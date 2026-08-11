@@ -14,24 +14,10 @@ import Link from "next/link";
  * dropping it in, the same treatment already applied to the YFP mark.
  */
 export function FalakLogo({ variant = "light" }: { variant?: "light" | "dark" }) {
-  const textColor = variant === "light" ? "text-paper" : "text-ink";
+  const logoSrc = variant === "light" ? "/images/falak-logo-light.png" : "/images/falak-logo.png";
   return (
     <Link href="/" className="group flex items-center gap-2.5" aria-label="FALAK home">
-      <span
-        className={`relative flex h-7 w-7 items-center justify-center rounded-full border ${
-          variant === "light" ? "border-paper/60" : "border-ink/60"
-        }`}
-      >
-        <span className={`h-1.5 w-1.5 rounded-full ${variant === "light" ? "bg-copper-light" : "bg-copper"}`} />
-        <span
-          className={`absolute inset-0 rounded-full border border-dashed ${
-            variant === "light" ? "border-paper/30" : "border-ink/25"
-          } transition-transform duration-700 group-hover:rotate-90`}
-        />
-      </span>
-      <span className={`font-display text-lg font-semibold tracking-wide ${textColor}`}>
-        FALAK
-      </span>
+      <Image src={logoSrc} alt="FALAK" width={140} height={32} className="h-8 w-auto" />
     </Link>
   );
 }
