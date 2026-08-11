@@ -17,7 +17,7 @@ export function FalakLogo({ variant = "light" }: { variant?: "light" | "dark" })
   const logoSrc = variant === "light" ? "/images/falak-logo-light.png" : "/images/falak-logo.png";
   return (
     <Link href="/" className="group flex items-center gap-2.5" aria-label="FALAK home">
-      <Image src={logoSrc} alt="FALAK" width={275} height={70} className="h-18 w-auto" />
+      <Image src={logoSrc} alt="FALAK" width={255} height={64} className="h-16 w-auto" />
     </Link>
   );
 }
