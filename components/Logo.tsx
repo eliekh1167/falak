@@ -17,7 +17,7 @@ export function FalakLogo({ variant = "light" }: { variant?: "light" | "dark" })
   const logoSrc = variant === "light" ? "/images/falak-logo-light.png" : "/images/falak-logo.png";
   return (
     <Link href="/" className="group flex items-center gap-2.5" aria-label="FALAK home">
-      <Image src={logoSrc} alt="FALAK" width={140} height={32} className="h-8 w-auto" />
+      <Image src={logoSrc} alt="FALAK" width={180} height={40} className="h-8 w-auto" />
     </Link>
   );
 }
@@ -45,7 +45,7 @@ export function YfpBadge({ variant = "light" }: { variant?: "light" | "dark" }) 
   );
 }
 
-export function YfpMark({ size = 28 }: { size?: number }) {
+export function YfpMark({ size = 35 }: { size?: number }) {
   return (
     <Image
       src="/images/yfp-logo.png"
