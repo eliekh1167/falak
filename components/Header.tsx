@@ -36,8 +36,9 @@ export function Header() {
       }`}
     >
       <div className="container-content flex h-20 items-center justify-between">
-        <FalakLogo variant="light" />
-
+<div className="mt-3">
+  <FalakLogo variant="light" />
+</div>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
           {NAV_LINKS.map((link) => {
             const active = pathname === link.href;
