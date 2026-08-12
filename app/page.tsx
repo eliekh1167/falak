@@ -47,7 +47,7 @@ export default function HomePage() {
           playsInline
           className="absolute inset-0 h-full w-full object-cover opacity-40"
         >
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-void/60" />
         <OrbitField className="inset-0" />
