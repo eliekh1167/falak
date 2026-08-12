@@ -60,15 +60,15 @@ export default function HomePage() {
 
           <FadeIn delay={0.08}>
             <h1 className="max-w-3xl font-display text-5xl font-semibold leading-[1.08] text-paper md:text-6xl lg:text-7xl">
-              Reviving Lebanon&apos;s reach into orbit.
+              Advancing Frontiers in Aerospace
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.16}>
             <p className="mt-7 max-w-xl font-body text-lg leading-relaxed text-paper/70">
-              FALAK is a student-run aerospace and engineering program building
-              UAVs, small satellites, and the research bench behind them —
-              picking up where the Lebanese Rocket Society left off.
+              FALAK is a space and engineering program building 
+              UAVs, micro-satellites, ground communications, micro turbojets,
+              ground communications and the research bench behind them, from design through testing.
             </p>
           </FadeIn>
 
