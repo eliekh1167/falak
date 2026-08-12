@@ -8,30 +8,30 @@ import { YfpBadge } from "@/components/Logo";
 import { projects } from "@/lib/projects";
 
 const HIGHLIGHTS = [
-  { value: "2", label: "Airframes in active development" },
-  { value: "3", label: "Program pillars: UAV, CubeSat, Lab" },
-  { value: "1U", label: "Technology demonstrator in design" },
-  { value: "2024", label: "Founded under Youth for Physics" },
+  { value: "8+", label: "Projects & Events" },
+  { value: "26000+", label: "Community" },
+  { value: "27", label: "Members" },
+  { value: "2026", label: "Founded under Youth for Physics" },
 ];
 
 const UPDATES = [
   {
     date: "Ongoing",
-    title: "Stingray structural layout enters manufacturing",
+    title: "Nanomaterials project research phase is coming to an end",
     excerpt:
-      "The blended-wing airframe's spar architecture and skin layup plan are finalized; composite manufacturing begins next.",
+      "The research team at YFP is almost done with researching on the 93 nanomaterials and building the master dataset.",
   },
   {
     date: "Ongoing",
-    title: "CubeSat subsystem selection complete",
+    title: "Fixed-wing UAV planning complete",
     excerpt:
-      "Power, onboard computing, and communications architecture locked in ahead of structural design for the 1U demonstrator.",
+      "Architecture, CFD, FEA, team, components, wiring, and tool selections are completed.",
   },
   {
     date: "Recruiting",
-    title: "FALAK is opening its first cohort",
+    title: "FALAK is opening new roles",
     excerpt:
-      "Engineering, research, and operations tracks are open now — see the Join page for how to apply.",
+      "Engineering and research tracks are open now,  see the Join page to apply.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function HomePage() {
           <FadeIn delay={0.16}>
             <p className="mt-7 max-w-xl font-body text-lg leading-relaxed text-paper/70">
               FALAK is a space and engineering program building 
-              UAVs, micro-satellites, ground communications, micro turbojets,
+              UAVs, micro-satellites, micro turbojets,
               ground communications and the research bench behind them, from design through testing.
             </p>
           </FadeIn>
@@ -170,7 +170,7 @@ export default function HomePage() {
           <FadeIn>
             <p className="eyebrow-light">Get Involved</p>
             <h2 className="mx-auto mt-4 max-w-xl font-display text-3xl font-semibold text-paper md:text-4xl">
-              Build the next chapter of Lebanese aerospace with us.
+                Master the skies and orbit with us.
             </h2>
             <p className="mx-auto mt-4 max-w-md font-body text-paper/65">
               Engineering, research, and operations roles are open across all
