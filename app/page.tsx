@@ -93,8 +93,7 @@ export default function HomePage() {
             <FadeIn key={h.label} delay={i * 0.06}>
               <div>
                 <p className="font-display text-3xl font-semibold text-copper-light md:text-4xl">
-                  {h.value}
-                </p>
+<CountUp value={h.value} />                </p>
                 <p className="mt-2 font-mono text-xs uppercase tracking-widest2 text-paper/55">
                   {h.label}
                 </p>
