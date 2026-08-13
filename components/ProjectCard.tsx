@@ -1,10 +1,36 @@
+"use client";
+
 import Link from "next/link";
+import { useRef, useState } from "react";
 import type { Project } from "@/lib/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
+  const ref = useRef<HTMLAnchorElement>(null);
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+
+  function handleMouseMove(e: React.MouseEvent<HTMLAnchorElement>) {
+    const el = ref.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    setTilt({ x: y * -6, y: x * 6 });
+  }
+
+  function handleMouseLeave() {
+    setTilt({ x: 0, y: 0 });
+  }
+
   return (
     <Link
+      ref={ref}
       href={`/projects/${project.slug}`}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        transform: `perspective(800px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+        transition: "transform 0.15s ease-out",
+      }}
       className="group block overflow-hidden rounded-sm border border-line-soft bg-white/[0.03] transition-colors duration-300 hover:border-copper/60"
     >
       <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-indigo">
