@@ -6,6 +6,7 @@ import { Card } from "@/components/Card";
 import { ProjectCard } from "@/components/ProjectCard";
 import { YfpBadge } from "@/components/Logo";
 import { projects } from "@/lib/projects";
+import { CountUp } from "@/components/CountUp";
 
 const HIGHLIGHTS = [
   { value: "8+", label: "Projects & Events" },
