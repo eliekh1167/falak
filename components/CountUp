@@ -5,8 +5,8 @@ import { useInView } from "framer-motion";
 
 /**
  * CountUp — animates a number from 0 up to its target value once
- * it scrolls into view. Handles values like "2024" or "1U" by
- * counting only the numeric part and keeping any letters as a suffix.
+ * it scrolls into view. Handles values like "2026" or "8+" by
+ * counting only the numeric part and keeping any letters/symbols as a suffix.
  */
 export function CountUp({ value }: { value: string }) {
   const ref = useRef<HTMLSpanElement>(null);
