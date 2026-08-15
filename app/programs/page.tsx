@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "@/components/SectionHeading";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { ProgramDetails } from "@/components/ProgramDetails";
 import { programs } from "@/lib/programs";
 
 export const metadata: Metadata = {
@@ -23,6 +24,25 @@ export default function ProgramsPage() {
               description="Every FALAK member works within one of three program pillars. Each runs its own full development cycle — design, build, test — rather than treating engineering as a side activity."
               variant="light"
             />
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              {programs.map((program) => (
+                
+                  key={program.slug}
+                  href={`#${program.slug}`}
+                  className="group rounded-sm border border-ink/15 bg-white/40 p-5 transition-colors hover:border-copper"
+                >
+                  <p className="font-mono text-xs uppercase tracking-widest2 text-copper">
+                    {program.shortName}
+                  </p>
+                  <p className="mt-2 font-display text-base font-semibold text-ink transition-colors group-hover:text-copper">
+                    {program.name}
+                  </p>
+                </a>
+              ))}
+            </div>
           </FadeIn>
         </div>
       </section>
@@ -65,38 +85,7 @@ export default function ProgramsPage() {
                       {program.description}
                     </p>
 
-                    <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                      <div>
-                        <p className="font-mono text-xs uppercase tracking-widest2 text-copper-light">
-                          What students do
-                        </p>
-                        <ul className="mt-3 space-y-2">
-                          {program.whatStudentsDo.map((item) => (
-                            <li
-                              key={item}
-                              className="border-l border-line-soft pl-3 font-body text-sm leading-relaxed text-paper/70"
-                            >
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <p className="font-mono text-xs uppercase tracking-widest2 text-copper-light">
-                          Skills gained
-                        </p>
-                        <ul className="mt-3 space-y-2">
-                          {program.skillsGained.map((item) => (
-                            <li
-                              key={item}
-                              className="border-l border-line-soft pl-3 font-body text-sm leading-relaxed text-paper/70"
-                            >
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+                    <ProgramDetails program={program} />
 
                     <p className="mt-8 font-mono text-xs uppercase tracking-widest2 text-paper/45">
                       Status — {program.status}
