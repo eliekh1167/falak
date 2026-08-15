@@ -29,7 +29,7 @@ export default function ProgramsPage() {
           <FadeIn delay={0.1}>
             <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
               {programs.map((program) => (
-                
+                <a
                   key={program.slug}
                   href={`#${program.slug}`}
                   className="group rounded-sm border border-ink/15 bg-white/40 p-5 transition-colors hover:border-copper"
